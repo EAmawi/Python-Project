@@ -7,7 +7,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.bind((serverHost, serverPort))
 
 serverSocket.listen(1)
-print('Ready to recieve...')
+print('Ready...')
 
 msg1 = 'Enter First Number: '
 msg1 = 'Enter Operation ( + or - or * or / ): '
