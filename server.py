@@ -1,6 +1,3 @@
-
-
-
 from socket import *
 
 serverHost = '127.0.0.1'

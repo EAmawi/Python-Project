@@ -3,6 +3,8 @@ from socket import *
 serverHost = '127.0.0.1'
 serverPort = 5555
 
+print('start...')
+
 while 1:
     clientSocket = socket(AF_INET, SOCK_STREAM)
     clientSocket.connect((serverHost, serverPort))
