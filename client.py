@@ -1,6 +1,3 @@
-
-
-
 from socket import *
 
 serverHost = '127.0.0.1'
@@ -10,13 +7,16 @@ while 1:
     clientSocket = socket(AF_INET, SOCK_STREAM)
     clientSocket.connect((serverHost, serverPort))
 
-    num1 = input('Enter First Number: ')
+    msg1 = clientSocket.recv(1024)
+    num1 = input(msg1)
     clientSocket.sendall(str.encode(num1))
 
-    op = input('Enter Operation: ')
+    msg2 = clientSocket.recv(1024)
+    op = input(msg2)
     clientSocket.sendall(str.encode(op))
 
-    num2 = input('Enter Second Number: ')
+    msg3 = clientSocket.recv(1024)
+    num2 = input(msg3)
     clientSocket.sendall(str.encode(num2))
 
     result = clientSocket.recv(1024)
