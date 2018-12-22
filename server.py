@@ -16,17 +16,17 @@ msg1 = 'Enter Second Number: '
 while 1:
     connectionSocket, addr = serverSocket.accept()
 
-    connectionSocket.send(msg1)
-    num1 = connectionSocket.recv.(1024)
+    connectionSocket.send(str.encode(msg1))
+    num1 = connectionSocket.recv.(1024).decode()
 
-    connectionSocket.send(msg2)
-    op = connectionSocket.recv(1024)
+    connectionSocket.send(str.encode(msg2))
+    op = connectionSocket.recv(1024).decode()
 
-    connectionSocket.send(msg3)
-    num2 = connectionSocket.recv(1204)
+    connectionSocket.send(str.encode(msg3))
+    num2 = connectionSocket.recv(1204).decode()
 
     result = 0;
-    connectionSocket.send(result)
+    connectionSocket.send(str.encode(result))
 
     connectionSocket.close()
 
